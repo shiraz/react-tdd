@@ -31,7 +31,7 @@ module.exports = {
                 if (isSauce) {
                     browser.assert.ok(Math.floor(result.value.currentTime) <= 6, 'Verify that the current duration of the playback is still 3 seconds (or 6 seconds if Sauce Labs is used).');
                 } else {
-                    //browser.assert.equal(Math.floor(result.value.currentTime), 3, 'Verify that the current duration of the playback is still 3 seconds.');
+                    browser.assert.equal(Math.floor(result.value.currentTime), 3, 'Verify that the current duration of the playback is still 3 seconds.');
                 }
             })
             .end();
